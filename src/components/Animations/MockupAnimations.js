@@ -38,4 +38,72 @@ const Wrapper = styled.div`
 
     border-radius: 16px;
   }
+  .mockup2 {
+    position: absolute;
+    width: 183px;
+    height: 120px;
+    left: 214px;
+    top: 0px;
+
+    background: linear-gradient(
+      198.85deg,
+      #4316db 12.72%,
+      #9076e7 54.49%,
+      #a2eeff 100.01%
+    );
+    border: 0.27304px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 8.19119px 16.3824px rgba(0, 0, 0, 0.1),
+      0px 16.3824px 32.7648px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(21.8432px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 16.3824px;
+  }
+
+  .mockup3 {
+    position: absolute;
+    width: 701px;
+    height: 428px;
+    left: 37px;
+    top: 60px;
+
+    background: rgba(23, 12, 61, 0.5);
+    border: 0.342305px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(27.3844px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 6.8461px;
+  }
+
+  .mockup4 {
+    position: absolute;
+    width: 399px;
+    height: 274px;
+    left: 194px;
+    top: 262px;
+
+    background: rgba(39, 20, 62, 0.3);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    backdrop-filter: blur(27.3844px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 14px;
+  }
+
+  .mockup5 {
+    position: absolute;
+    width: 412px;
+    height: 274px;
+    left: 616px;
+    top: 262px;
+
+    background: rgba(39, 20, 62, 0.2);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    backdrop-filter: blur(27.3844px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 14px;
+  }
 `
