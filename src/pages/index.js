@@ -5,16 +5,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  }
-]
-
 const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
@@ -22,13 +12,8 @@ const IndexPage = () => (
         Welcome to <b>Gatsby!</b>
       </h1>
       <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
+        <b>Pages:</b>{" "}
+        <Link to="/page-2/"> Go to page 2</Link>
       </p>
     </div>
   </Layout>
