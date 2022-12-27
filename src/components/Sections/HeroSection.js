@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
+import MockupAnimations from "../Animations/MockupAnimations"
 import PurchaseButton from "../Buttons/PurchaseButton"
 import { H1, MediumText } from "../Styles/TextStyles"
 import { themes } from "./ColorStyles"
@@ -24,6 +25,7 @@ export default function HeroSection() {
               subtitle="120+ hours of videos"
             />
           </TextWrapper>
+          <MockupAnimations/>
         </ContentWrapper>
       </Wrapper>
     </>
@@ -37,6 +39,8 @@ const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
   padding: 200px 30px;
+  display:grid;
+  grid-template-columns: 360px auto;
 `
 const TextWrapper = styled.div`
   max-width: 360px;
