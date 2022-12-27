@@ -44,9 +44,9 @@
   margin-top: var(--space-1);
 }
 
-/* .textCenter {
+.textCenter {
   text-align: center;
-} */
+} 
 
 .intro {
   max-width: none;
