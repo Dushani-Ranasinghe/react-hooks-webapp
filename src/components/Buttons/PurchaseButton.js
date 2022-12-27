@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import { Caption2, SmallText } from "../Styles/TextStyles"
 import { Link } from "gatsby"
+
 import creditBtn from "../../images/icons/credit.svg"
 import ringIcon from "../../images/icons/icon-ring.svg"
 
@@ -12,7 +13,7 @@ export default function PurchaseButton(props) {
     <Link to="/page-2">
       <Wrapper>
         <IconWrapper>
-          <Icon src={creditBtn} />
+          <Icon src={creditBtn} className='icon'/>
           <Ring src={ringIcon} />
         </IconWrapper>
         <TextWrapper>
@@ -38,13 +39,20 @@ const Wrapper = styled.div`
   grid-template-columns: 53px auto;
   align-content: center;
   gap: 20px;
-  transition: 1s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  *,
+  & {
+    transition: 1s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 
   :hover {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
       0px 30px 60px rgba(23, 0, 102, 0.5),
       inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
-      transform: translateY(-3px);
+    transform: translateY(-3px);
+    .icon{
+        transform: scale(1.2);
+    }
   }
 `
 const IconWrapper = styled.div`
@@ -57,6 +65,9 @@ const IconWrapper = styled.div`
   align-content: center;
   justify-self: center;
   position: relative;
+  ${Wrapper}:hover &{
+    filter: hue-rotate(10deg) brightness(110%) saturate(120%);
+  }
 `
 const Icon = styled.img`
   width: 29px;
@@ -66,6 +77,10 @@ const Ring = styled.img`
   position: absolute;
   top: -15px;
   left: -16px;
+
+  ${Wrapper}:hover & {
+    transform: rotate(30deg) scale(1.2) translate(1px, 1px);
+  }
 `
 const TextWrapper = styled.div`
   display: grid;
