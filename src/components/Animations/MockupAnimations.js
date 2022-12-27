@@ -1,6 +1,12 @@
 import * as React from "react"
 import styled from "styled-components"
 
+import mockupImg1 from "../../images/animations/mockup1.svg"
+import mockupImg2 from "../../images/animations/mockup2.svg"
+import mockupImg3 from "../../images/animations/mockup3.svg"
+import mockupImg4 from "../../images/animations/mockup4.svg"
+import mockupImg5 from "../../images/animations/mockup5.svg"
+
 export default function MockupAnimations() {
   return (
     <>
@@ -24,7 +30,7 @@ const Wrapper = styled.div`
     left: 0;
     top: 0px;
 
-    background: radial-gradient(
+    background: url(${mockupImg1}), radial-gradient(
       218.51% 281.09% at 100% 100%,
       rgba(253, 63, 51, 0.6) 0%,
       rgba(76, 0, 200, 0.6) 45.83%,
@@ -34,7 +40,6 @@ const Wrapper = styled.div`
     box-sizing: border-box;
     box-shadow: 0px 16.3881px 32.7761px rgba(99, 30, 187, 0.5);
     backdrop-filter: blur(21.8507px);
-    /* Note: backdrop-filter has minimal browser support */
 
     border-radius: 16px;
   }
@@ -45,7 +50,7 @@ const Wrapper = styled.div`
     left: 214px;
     top: 0px;
 
-    background: linear-gradient(
+    background: url(${mockupImg2}),linear-gradient(
       198.85deg,
       #4316db 12.72%,
       #9076e7 54.49%,
@@ -55,7 +60,6 @@ const Wrapper = styled.div`
     box-shadow: 0px 8.19119px 16.3824px rgba(0, 0, 0, 0.1),
       0px 16.3824px 32.7648px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(21.8432px);
-    /* Note: backdrop-filter has minimal browser support */
 
     border-radius: 16.3824px;
   }
@@ -67,11 +71,9 @@ const Wrapper = styled.div`
     left: 37px;
     top: 60px;
 
-    background: rgba(23, 12, 61, 0.5);
+    background: url(${mockupImg3}),rgba(23, 12, 61, 0.5);
     border: 0.342305px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(27.3844px);
-    /* Note: backdrop-filter has minimal browser support */
-
     border-radius: 6.8461px;
   }
 
@@ -82,11 +84,10 @@ const Wrapper = styled.div`
     left: 194px;
     top: 262px;
 
-    background: rgba(39, 20, 62, 0.3);
+    background: url(${mockupImg4}),rgba(39, 20, 62, 0.3);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     backdrop-filter: blur(27.3844px);
-    /* Note: backdrop-filter has minimal browser support */
 
     border-radius: 14px;
   }
@@ -98,11 +99,10 @@ const Wrapper = styled.div`
     left: 616px;
     top: 262px;
 
-    background: rgba(39, 20, 62, 0.2);
+    background: url(${mockupImg5}),rgba(39, 20, 62, 0.2);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     backdrop-filter: blur(27.3844px);
-    /* Note: backdrop-filter has minimal browser support */
 
     border-radius: 14px;
   }

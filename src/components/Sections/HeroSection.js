@@ -33,7 +33,8 @@ export default function HeroSection() {
 }
 
 const Wrapper = styled.div`
-  background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
+  background: linear-gradient(190deg, #4316DB 13.57%, #9076E7 98.38%);
+  overflow: hidden;
 `
 const ContentWrapper = styled.div`
   max-width: 1234px;
