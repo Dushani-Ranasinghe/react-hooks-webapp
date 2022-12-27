@@ -1,5 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
+import { H1, MediumText} from "../Styles/TextStyles"
+import { themes } from "./ColorStyles"
 
 // import Logo from "../../images/logos/logo.svg"
 
@@ -34,13 +36,8 @@ const TextWrapper = styled.div`
   display: grid;
   gap: 30px;
 `
-const Title = styled.h1`
-  font-weight: bold;
-  font-size: 60px;
-  color: white;
+const Title = styled(H1)`
+  color: ${themes.dark.text1};
 `
 
-const Description = styled.p`
-  font-size: 17px;
-  line-height: 130%;
-`
+const Description = styled(MediumText)``
