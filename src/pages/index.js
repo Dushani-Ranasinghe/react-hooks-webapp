@@ -5,9 +5,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
+import Logo from "../images/logos/logo.svg"
+
 const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
+    <img src={Logo} width="50" alt="logo"/>
       <h1>
         Welcome to <b>Gatsby!</b>
       </h1>
