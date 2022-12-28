@@ -13,5 +13,5 @@ export const menuData = [
   },
   { title: "Pricing", icon: pricingImg, link: "/pricing" },
   { title: "", icon: searchImg, link: "/search" },
-  { title: "", icon: accountImg, link: "/account" },
+  { title: "", icon: accountImg, link: "/account" }
 ]
