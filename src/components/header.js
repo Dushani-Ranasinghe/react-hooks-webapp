@@ -5,6 +5,7 @@ import { menuData } from "../Data/menuData"
 
 import logoImg from "../images/logos/logo.svg"
 import MenuButton from "./Buttons/MenuButton"
+import MenuTooltip from "./tooltips/MenuTooltip"
 
 export default function Header() {
   return (
@@ -17,6 +18,7 @@ export default function Header() {
           <MenuButton item={item} key={index} />
         ))}
       </MenuWrapper>
+      <MenuTooltip/>
     </Wrapper>
   )
 }
