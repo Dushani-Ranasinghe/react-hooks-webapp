@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { menuData } from "../Data/menuData"
@@ -10,17 +10,33 @@ import hamburgerImg from "../images/icons/hamburger.svg"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const ref = useRef()
+  const tooltipRef = useRef()
+
   function handleClick(event) {
     setIsOpen(!isOpen)
     event.preventDefault()
   }
+  function handleClickOutside(event) {
+    if (ref.current && !ref.current.contains(event.target) && !tooltipRef.current.contains(event.target)) {
+      console.log("Document is clicked")
+      setIsOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
 
   return (
     <Wrapper>
       <Link to="/">
         <img src={logoImg} alt="logo" />
       </Link>
-      <MenuWrapper count={menuData.length}>
+      <MenuWrapper count={menuData.length} ref={ref}>
         {menuData.map((item, index) =>
           item.link === "/account" ? (
             <MenuButton
@@ -33,10 +49,15 @@ export default function Header() {
           )
         )}
         <HamburgerWrapper>
-          <MenuButton item={{ title: "", icon: hamburgerImg, link: "" }} />
+          <MenuButton
+            item={{ title: "", icon: hamburgerImg, link: "/" }}
+            onClick={event => handleClick(event)}
+          />
         </HamburgerWrapper>
       </MenuWrapper>
-      <MenuTooltip isOpen={isOpen} />
+      <div ref={tooltipRef}>
+        <MenuTooltip isOpen={isOpen} />
+      </div>
     </Wrapper>
   )
 }
@@ -51,12 +72,12 @@ const Wrapper = styled.div`
   padding: 0 30px;
   align-items: center;
   @media (max-width: 768px) {
-  top: 30px;
-}
-@media (max-width: 450px) {
-	top: 20px;
-  padding: 0 20px;
-}
+    top: 30px;
+  }
+  @media (max-width: 450px) {
+    top: 20px;
+    padding: 0 20px;
+  }
 `
 const MenuWrapper = styled.div`
   display: grid;
